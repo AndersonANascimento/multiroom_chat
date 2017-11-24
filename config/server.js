@@ -1,17 +1,17 @@
 /* importar o módulo do framework express */
-let express = require('express');
+const express = require('express');
 
 /* importar o módulo do consign */
-let consign = require('consign');
+const consign = require('consign');
 
 /* importar o módulo do body-parser */
-let bodyParser = require('body-parser');
+const bodyParser = require('body-parser');
 
 /* importar o módulo do express-validator */
-let expressValidator = require('express-validator');
+const expressValidator = require('express-validator');
 
 /* iniciar o objeto do express */
-let app = express();
+const app = express();
 
 /* setar as variáveis 'view engine' e 'views' do express */
 app.set('view engine', 'ejs');
