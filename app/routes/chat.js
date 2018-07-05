@@ -1,8 +1,18 @@
-module.exports = function (application) {
-    application.get('/chat', (req, res) => {
-        application.app.controllers.chat.iniciaChat(application, req, res);
+'use strict';
+
+const chat = (app) => {
+
+    app.get('/chat', (req, res) => {
+        let chatCtl = new app.controllers.ChatCtl(app);
+        chatCtl.iniciaChat(req, res);
     });
-    application.post('/chat', (req, res) => {
-        application.app.controllers.chat.iniciaChat(application, req, res);
+
+    app.post('/chat', (req, res) => {
+        let chatCtl = new app.controllers.ChatCtl(app);
+        chatCtl.iniciaChat(req, res);
+        
     });
+    
 };
+
+module.exports = chat;

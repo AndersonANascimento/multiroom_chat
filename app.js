@@ -1,10 +1,9 @@
+'use strict';
 /* importar as configurações do servidor */
 const app = require('./config/server');
 
 /* parametrizar a porta de escuta */
-const server = app.listen(80, () => {
-    console.log('Servidor online...');
-});
+const server = app.listen(80, () => console.log('Servidor online na porta 80...'));
 
 /* importar o módulo socket.io e setar a mesma porta do server */
 const io = require('socket.io').listen(server);

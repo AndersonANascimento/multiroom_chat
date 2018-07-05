@@ -1,5 +1,12 @@
-module.exports = function (application) {
-    application.get('/', (req, res) => {
-        application.app.controllers.index.home(application, req, res);
+'use strict';
+
+const index = (app) => {
+
+    app.get('/', (req, res) => {
+        let homeCtl = new app.controllers.HomeCtl(app);
+        homeCtl.home(req, res);
     });
+    
 };
+
+module.exports = index;
