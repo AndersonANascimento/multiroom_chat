@@ -23,7 +23,7 @@ class ChatCtl {
             mensagem: ' acabou de entrar no chat!'
         });
         
-        res.render('chat');
+        res.render('chat', { data: dadosForm });
     }
 }
     
