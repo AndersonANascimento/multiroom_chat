@@ -47,13 +47,12 @@
                                 <div class="alert alert-danger">
                                     <strong>Atenção!</strong>
                                     <ul>
-                                        <% for(var i = 0; i < validacao.length; i++)
-                                        { %>
+                                        <% validacao.forEach((e) => { %>
                                             <li>
-                                                <%=validacao[i].msg%>
+                                                <%=e.msg%>
                                             </li>
                                             <% 
-                                        } %>
+                                        }) %>
                                     </ul>
                                 </div>
                             </div>

@@ -3,7 +3,7 @@
 const index = (app) => {
 
     app.get('/', (req, res) => {
-        let homeCtl = new app.controllers.HomeCtl(app);
+        let homeCtl = new app.controllers.HomeCtl();
         homeCtl.home(req, res);
     });
     
